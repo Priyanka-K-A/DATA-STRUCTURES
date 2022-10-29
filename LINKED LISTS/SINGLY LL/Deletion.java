@@ -76,7 +76,7 @@ public class Main
 	    int n = sc.nextInt();
 	    for(int i=0;i<n;i++)
 	    {
-	        int data = sc.nextInt();
+	        int data =  sc.nextInt();
 	        ll.insertion(data);
 	    }
 	    ll.display();
