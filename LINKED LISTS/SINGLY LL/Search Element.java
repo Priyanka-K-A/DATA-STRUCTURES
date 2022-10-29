@@ -71,5 +71,5 @@ public class Main
 	    ll.display();
 	    int key = sc.nextInt();
 	    ll.search(key);
-	}
+	 }
 }
