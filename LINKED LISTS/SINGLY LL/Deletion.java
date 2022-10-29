@@ -14,18 +14,7 @@ class LinkedList
         nn.next = null;
         return nn;
     }
-    void insertAtBeginning(int data)
-    {
-        Node nn = createNewNode(data);
-        if(head==null)
-            head = nn;
-        else
-        {
-            nn.next = head;
-            head = nn;
-        }
-    }
-    void insertAtEnd(int data)
+    void insertion(int data)
     {
         Node nn = createNewNode(data);
         if(head==null)
@@ -37,18 +26,6 @@ class LinkedList
                 temp = temp.next;
             temp.next = nn;    
         }
-    }
-    void insertAtPosition(int data,int loc)
-    {
-        Node nn = createNewNode(data);
-        Node temp = head;
-        while(--loc>0)
-        {
-            temp = temp.next;
-        }
-        nn.next = temp.next;
-        temp.next = nn;
-            
     }
     void display()
     {
@@ -96,14 +73,12 @@ public class Main
 {
 	public static void main(String[] args) {
 	    LinkedList ll = new LinkedList();
-	    ll.insertAtBeginning(10);
-	    ll.insertAtBeginning(20);
-	    ll.insertAtBeginning(30);
-	    ll.display();
-	    ll.insertAtEnd(40);
-	    ll.insertAtEnd(50);
-	    ll.display();
-	    ll.insertAtPosition(60,3);
+	    int n = sc.nextInt();
+	    for(int i=0;i<n;i++)
+	    {
+	        int data = sc.nextInt();
+	        ll.insertion(data);
+	    }
 	    ll.display();
 	    ll.deleteAtBeginning();
 	    ll.display();
